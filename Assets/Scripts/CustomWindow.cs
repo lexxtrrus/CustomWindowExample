@@ -134,6 +134,8 @@ public class CustomWindow : EditorWindow
                 _texture2D.SetPixel(j,i, _colors[j,i]);
             }
         }
+        
+        _texture2D.filterMode = FilterMode.Point;
         _texture2D.Apply();
 
         source.sharedMaterial.mainTexture = _texture2D;
